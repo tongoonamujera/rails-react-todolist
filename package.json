@@ -1,0 +1,25 @@
+{
+  "name": "rails_react_todolist",
+  "private": true,
+  "dependencies": {
+    "@babel/preset-react": "^7.16.7",
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "^5.4.3",
+    "axios": "^0.26.1",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "prop-types": "^15.8.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-redux": "^7.2.8",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "redux": "^4.1.2",
+    "turbolinks": "^5.2.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^4.8.1"
+  }
+}
