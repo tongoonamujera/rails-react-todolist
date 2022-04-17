@@ -1,0 +1,27 @@
+.loadingContainer {
+  width: 20%;
+  background-color: white;
+  color: black;
+  margin: auto;
+  border-radius: 0.5rem;
+  height: 5vh;
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loadingText {
+      font-size: 1.3rem;
+      text-shadow: 1px 1px white;
+      font-weight: 900;
+
+      .loadingDots {
+        font-size: 3rem;
+        text-shadow: 1px 1px white;
+        font-weight: 900;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 900;
+  border: 3px solid #dddcdc;
+  background-color: #dbd7d7;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.container .id {
+  width: 5%;
+}
+
+.container .body {
+  width: 90%;
+}
+
+.container .completed {
+  width: 5%;
+  margin: auto;
+}
+
+.container .completed input[type="checkbox"] {
+  height: 1.6rem;
+  width: 1.8rem;
+  margin-top: 0.5rem;
+}
+/*# sourceMappingURL=todoItem.module.css.map */

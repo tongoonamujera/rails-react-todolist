@@ -1,0 +1,115 @@
+.container {
+  width: 100%;
+  background-color: #2a012e;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .topSection {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.container .topSection h1 {
+  font-style: oblique;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px black;
+  font-weight: 900;
+}
+
+.container .todoForm {
+  width: 40%;
+}
+
+.container .todoForm form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2%;
+}
+
+.container .todoForm form input[type="text"] {
+  width: 75%;
+  height: 3rem;
+  font-size: 1.3rem;
+  border-radius: 0.3rem;
+  text-align: center;
+}
+
+.container .todoForm form input[type="text"]:focus {
+  border: 1px solid white;
+  outline: white;
+}
+
+.container .todoForm form button {
+  width: 25%;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  background-color: #ec4ed2;
+  color: white;
+  font-weight: 900;
+  text-shadow: 1px 1px black;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.container .navigation {
+  width: 35%;
+}
+
+.container .navigation .navLinks {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .navigation .navLinks .firstLink,
+.container .navigation .navLinks .secondLink,
+.container .navigation .navLinks .thirdLink {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: white;
+  cursor: pointer;
+  text-shadow: 2px 2px black;
+  padding: 0.5rem 1rem;
+  border-bottom: 0.7rem solid #2a012e;
+}
+
+.container .navigation .navLinks .firstLink:hover,
+.container .navigation .navLinks .secondLink:hover,
+.container .navigation .navLinks .thirdLink:hover {
+  background-color: chocolate;
+  border-bottom: 0.7rem solid #414102;
+  border-radius: 0.2rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.container .navigation .navLinks .firstLink:focus,
+.container .navigation .navLinks .secondLink:focus,
+.container .navigation .navLinks .thirdLink:focus {
+  background-color: chocolate;
+  border-bottom: 0.7rem solid #414102;
+  border-radius: 0.2rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/*# sourceMappingURL=Header.module.css.map */

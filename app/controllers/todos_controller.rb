@@ -6,6 +6,11 @@ class TodosController < ApplicationController
     @todos = Todo.all
   end
 
+  def get_todos
+    @todos = Todo.all
+    render json: {data: @todos}
+  end
+
   # GET /todos/1 or /todos/1.json
   def show
   end
@@ -31,6 +36,19 @@ class TodosController < ApplicationController
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @todo.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def create_todo
+    todo = Todo.create!(
+      body: params['body'],
+      completed: params['completed']
+    )
+
+    if todo
+      render json: {status: :created, data: Todo.all}
+    else
+      render json: {status: 501}
     end
   end
 

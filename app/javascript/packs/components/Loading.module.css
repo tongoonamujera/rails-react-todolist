@@ -1,0 +1,34 @@
+.loadingContainer {
+  width: 20%;
+  background-color: white;
+  color: black;
+  margin: auto;
+  border-radius: 0.5rem;
+  height: 5vh;
+}
+
+.loadingContainer .container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loadingContainer .container .loadingText {
+  font-size: 1.3rem;
+  text-shadow: 1px 1px white;
+  font-weight: 900;
+}
+
+.loadingContainer .container .loadingText .loadingDots {
+  font-size: 3rem;
+  text-shadow: 1px 1px white;
+  font-weight: 900;
+}
+/*# sourceMappingURL=Loading.module.css.map */

@@ -1,0 +1,93 @@
+.container {
+  width: 100%;
+  background-color: rgb(42, 1, 46);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .topSection {
+    width: fit-content;
+
+    h1 {
+      font-style: oblique;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px black;
+      font-weight: 900;
+    }
+  }
+
+  .todoForm {
+    width: 40%;
+
+    form {
+      width: 100%;
+      display: flex;
+      padding: 2%;
+
+      input[type="text"] {
+        width: 75%;
+        height: 3rem;
+        font-size: 1.3rem;
+        border-radius: 0.3rem;
+        text-align: center;
+
+        &:focus {
+          border: 1px solid white;
+          outline: white;
+        }
+      }
+
+      button {
+        width: 25%;
+        padding: 0.5rem 1rem;
+        font-size: 1.3rem;
+        background-color: rgb(236, 78, 210);
+        color: white;
+        font-weight: 900;
+        text-shadow: 1px 1px black;
+        border-radius: 0.3rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .navigation {
+    width: 35%;
+
+    .navLinks {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .firstLink,
+      .secondLink,
+      .thirdLink {
+        font-size: 1.3rem;
+        font-weight: 900;
+        color: white;
+        cursor: pointer;
+        text-shadow: 2px 2px black;
+        padding: 0.5rem 1rem;
+        border-bottom: 0.7rem solid rgb(42, 1, 46);
+
+        &:hover {
+          background-color: chocolate;
+          border-bottom: 0.7rem solid rgb(65, 65, 2);
+          border-radius: 0.2rem;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        &:focus {
+          background-color: chocolate;
+          border-bottom: 0.7rem solid rgb(65, 65, 2);
+          border-radius: 0.2rem;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+  }
+}

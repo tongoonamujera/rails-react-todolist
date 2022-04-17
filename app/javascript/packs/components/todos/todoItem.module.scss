@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  border: 3px solid rgb(221, 220, 220);
+  background-color: rgb(219, 215, 215);
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+
+  .id {
+    width: 5%;
+  }
+
+  .body {
+    width: 90%;
+  }
+
+  .completed {
+    width: 5%;
+    margin: auto;
+    input[type="checkbox"] {
+      height: 1.6rem;
+      width: 1.8rem;
+      margin-top: 0.5rem;
+    }
+  }
+}

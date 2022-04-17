@@ -20,6 +20,9 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@webpack-cli/info": "^1.4.1",
+    "@webpack-cli/serve": "^1.6.1",
+    "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.8.1"
   }
 }
