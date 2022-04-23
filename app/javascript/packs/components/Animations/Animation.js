@@ -4,6 +4,7 @@ const Animation = ({ text }) => {
   const word = text;
   const [typed, setTyped] = useState('');
   const [typing, setTyping] = useState(true);
+
   useEffect(() => {
     if (typing) {
       setTimeout(() => {
@@ -19,6 +20,7 @@ const Animation = ({ text }) => {
       }, 100)
     }
   }, [typed, typing])
+
   return (
     <>
       {typed}

@@ -18,7 +18,6 @@ const Header = () => {
         body: body ,
         completed: false
       } ).then(res=> {
-        console.log(res);
         dispatch(getAllTodos(res.data.data))
         
       })
