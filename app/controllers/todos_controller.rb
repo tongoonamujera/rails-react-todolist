@@ -11,6 +11,16 @@ class TodosController < ApplicationController
     render json: {data: @todos}
   end
 
+  def completed_todos
+    @completed = Todo.completed
+    render json: {data: @completed}
+  end
+
+  def pending_todos
+    @pending = Todo.pending
+    render json: {data: @pending}
+  end
+
   # GET /todos/1 or /todos/1.json
   def show
   end
