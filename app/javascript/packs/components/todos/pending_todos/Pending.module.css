@@ -1,0 +1,10 @@
+.container {
+  width: 45%;
+  margin: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: white;
+  padding: 0.5rem;
+}
+/*# sourceMappingURL=Pending.module.css.map */

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getAllTodos } from '../../redux/actions/todoActions';
 import styles from './Header.module.css';
 
@@ -8,9 +8,7 @@ const Header = () => {
   const bodyInputRef = useRef();
   const dispatch = useDispatch()
 
-  const clearInputs = () => {
-    bodyInputRef.value = ''
-  }
+  
 
   const SubmitHandler = (event) => {
     event.preventDefault();
@@ -52,7 +50,9 @@ const Header = () => {
           <div className={styles.firstLink}>
             All Tasks
           </div>
-          <div className={styles.secondLink}>Pending Tasks</div>
+          <div className={styles.secondLink}>
+            Pending
+          </div>
           <div className={styles.thirdLink}>Completed Tasks</div>
         </nav>
       </div>

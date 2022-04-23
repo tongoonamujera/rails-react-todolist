@@ -11,6 +11,8 @@ import styles from './hello_react.module.css';
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router';
 import { createRoot } from 'react-dom/cjs/react-dom.production.min';
+import Completed from './components/todos/completed_todos/Completed';
+import Pending from './components/todos/pending_todos/Pending';
 
 
 const Hello = () => {
@@ -22,6 +24,8 @@ const Hello = () => {
           <BrowserRouter>
             <Routes>
               <Route exact path="/" element={<TODOS />} />
+              <Route path="/completed_todos" element={<Completed />} />
+              <Route path="/pending_todos" element={<Pending />} />
             </Routes>
           </BrowserRouter>
         </main>

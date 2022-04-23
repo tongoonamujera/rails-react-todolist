@@ -35,7 +35,7 @@ const TodoItem = ({ id, body, completed }) => {
         {id}
       </div>
 
-      <div className={styles.body}>
+      <div contentEditable={true} className={styles.body}>
         {body}
       </div>
 
