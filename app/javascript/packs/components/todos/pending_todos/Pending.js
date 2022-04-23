@@ -25,12 +25,11 @@ const Pending = () => {
 
   const pending = useSelector(state => state.pending.pending);
 
-  const pending_todo = pending.map(todo => {
+  const pending_todo = pending.map((todo, index) => {
     const { id, body, completed } = todo;
-    console.log("completed: ", completed);
     return (
       <div key={id} className={styles.container}>
-        <TodoItem id={id} body={body} completed={completed} />
+        <TodoItem index={index} id={id} body={body} completed={completed} />
       </div>
     );
   });

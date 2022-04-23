@@ -64,27 +64,23 @@ class TodosController < ApplicationController
 
   # PATCH/PUT /todos/1 or /todos/1.json
   def update
-    respond_to do |format|
-      if @todo.update(todo_params)
-        render json: {data: Todo.all, status: 'updated'}
+    if @todo.update(todo_params)
+      render json: {data: Todo.all, status: 'updated'}
 
-        # format.html { redirect_to @todo, notice: "Todo was successfully updated." }
-        # format.json { render :show, status: :ok, location: @todo }
-      else
-        # format.html { render :edit, status: :unprocessable_entity }
-        # format.json { render json: @todo.errors, status: :unprocessable_entity }
-        render json: {status: 'null'}
-      end
+      # format.html { redirect_to @todo, notice: "Todo was successfully updated." }
+      # format.json { render :show, status: :ok, location: @todo }
+    else
+      # format.html { render :edit, status: :unprocessable_entity }
+      # format.json { render json: @todo.errors, status: :unprocessable_entity }
+      render json: {status: 'null'}
     end
   end
 
   # DELETE /todos/1 or /todos/1.json
   def destroy
     @todo.destroy
-    respond_to do |format|
-      format.html { redirect_to todos_url, notice: "Todo was successfully destroyed." }
-      format.json { head :no_content }
-    end
+
+    render json: {data: Todo.all}
   end
 
   private

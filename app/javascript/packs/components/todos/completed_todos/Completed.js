@@ -25,12 +25,11 @@ const Completed = () => {
   const completedTodos = useSelector(state => state.completed.completed);
   console.log('comp: ', completedTodos);
 
-  const completed_todo = completedTodos.map(todo => {
+  const completed_todo = completedTodos.map((todo, index) => {
     const { id, body, completed } = todo;
-    console.log("completed: ", completed);
     return (
       <div key={id} className={styles.container}>
-        <TodoItem id={id} body={body} completed={completed} />
+        <TodoItem index={index} id={id} body={body} completed={completed} />
       </div>
     );
   });

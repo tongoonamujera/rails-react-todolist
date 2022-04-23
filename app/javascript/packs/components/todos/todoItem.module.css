@@ -21,7 +21,7 @@
 }
 
 .container .body {
-  width: 90%;
+  width: 75%;
 }
 
 .container .completed {
@@ -33,5 +33,20 @@
   height: 1.6rem;
   width: 1.8rem;
   margin-top: 0.5rem;
+}
+
+.container .actions {
+  width: 15%;
+}
+
+.container .actions span {
+  padding: 0.3rem 1rem;
+  background-color: red;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-shadow: 1px 1px black;
+  cursor: pointer;
+  border-radius: 0.3rem;
 }
 /*# sourceMappingURL=todoItem.module.css.map */
