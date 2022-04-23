@@ -10,6 +10,13 @@ export const getAllTodos = (todos) => {
 export const getAllCompletedTodos = (todos) => {
   return {
     type: TodoConstants.GET_COMPLETED_TODOS,
-    payload: todos
+    payload: todos,
+  }
+}
+
+export const getAllPendingTodos = (todos) => {
+  return {
+    type: TodoConstants.GET_PENDING_TODOS,
+    payload: todos,
   }
 }

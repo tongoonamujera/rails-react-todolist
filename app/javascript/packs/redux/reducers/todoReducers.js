@@ -27,9 +27,23 @@ const completedTodosReducer = (state = { completed: [] }, { type, payload }) => 
   }
 }
 
+const pendingTodosReducer = (state = { pending: [] }, { type, payload }) => {
+  switch (type) {
+    case TodoConstants.GET_PENDING_TODOS:
+      return {
+        ...state,
+        pending: payload
+      }
+  
+    default:
+      return state;
+  }
+}
+
 const todos = combineReducers({
   allTodos: allTodosReducer,
-  completed: completedTodosReducer
+  completed: completedTodosReducer,
+  pending: pendingTodosReducer,
 })
 
 export default todos;
