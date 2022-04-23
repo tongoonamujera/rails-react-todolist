@@ -15,6 +15,20 @@
       letter-spacing: 1px;
       text-shadow: 2px 2px black;
       font-weight: 900;
+
+      &:after {
+        content: "|";
+        color: aqua;
+        font-weight: 900;
+        font-style: oblique;
+        animation: blink 1s step-start infinite;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
     }
   }
 

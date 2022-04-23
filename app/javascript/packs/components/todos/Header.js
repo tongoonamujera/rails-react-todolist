@@ -2,13 +2,12 @@ import axios from 'axios';
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { getAllTodos } from '../../redux/actions/todoActions';
+import Animation from '../Animations/Animation';
 import styles from './Header.module.css';
 
 const Header = () => {
   const bodyInputRef = useRef();
   const dispatch = useDispatch()
-
-  
 
   const SubmitHandler = (event) => {
     event.preventDefault();
@@ -31,7 +30,10 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.topSection}>
-        <h1>Welcome, Create Your tasks</h1>
+        <h1>
+          &nbsp;
+          <Animation text={"Welcome, Create Your tasks"}/>
+        </h1>
       </div>
       <div className={styles.todoForm}>
         <form onSubmit={SubmitHandler}>
