@@ -15,9 +15,6 @@ const TODOS = () => {
       .then(res => {
         debugger
 
-        console.log('working');
-        console.log(res.data[0]);
-
         dispatch(getAllTodos(res.data))
         setLoading(true);
       })

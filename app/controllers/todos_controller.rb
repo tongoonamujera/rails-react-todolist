@@ -56,11 +56,14 @@ class TodosController < ApplicationController
   def update
     respond_to do |format|
       if @todo.update(todo_params)
-        format.html { redirect_to @todo, notice: "Todo was successfully updated." }
-        format.json { render :show, status: :ok, location: @todo }
+        render json: {data: Todo.all, status: 'updated'}
+
+        # format.html { redirect_to @todo, notice: "Todo was successfully updated." }
+        # format.json { render :show, status: :ok, location: @todo }
       else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @todo.errors, status: :unprocessable_entity }
+        # format.html { render :edit, status: :unprocessable_entity }
+        # format.json { render json: @todo.errors, status: :unprocessable_entity }
+        render json: {status: 'null'}
       end
     end
   end

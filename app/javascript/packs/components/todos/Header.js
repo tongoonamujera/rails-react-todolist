@@ -49,7 +49,9 @@ const Header = () => {
 
       <div className={styles.navigation}>
         <nav className={styles.navLinks}>
-          <div className={styles.firstLink}>All Tasks</div>
+          <div className={styles.firstLink}>
+            All Tasks
+          </div>
           <div className={styles.secondLink}>Pending Tasks</div>
           <div className={styles.thirdLink}>Completed Tasks</div>
         </nav>

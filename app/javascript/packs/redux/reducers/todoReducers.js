@@ -19,7 +19,7 @@ const completedTodosReducer = (state = { completed: [] }, { type, payload }) => 
     case TodoConstants.GET_COMPLETED_TODOS:
       return {
         ...state,
-        ...payload
+        completed: payload
       }
   
     default:

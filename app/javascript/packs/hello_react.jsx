@@ -8,24 +8,31 @@ import TODOS from './components/allTodos';
 import Header from './components/todos/Header';
 import store from './redux/store';
 import styles from './hello_react.module.css';
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router';
+import { createRoot } from 'react-dom/cjs/react-dom.production.min';
+
 
 const Hello = () => {
   return (
-    <div className={styles.container}>
-      <Header />
-      <main className={styles.main}>
-        <TODOS />
-      </main>
-    </div>
+    <Provider store={store}>
+      <div className={styles.container}>
+        <Header />
+        <main className={styles.main}>
+          <BrowserRouter>
+            <Routes>
+              <Route exact path="/" element={<TODOS />} />
+            </Routes>
+          </BrowserRouter>
+        </main>
+      </div>
+    </Provider>
   )
 }
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <Provider store={store}>
-      <Hello />
-    </Provider>,
-    document.body.appendChild(document.createElement('div')),
-  )
+  const container = document.body.appendChild(document.createElement('div'));
+  const root = createRoot(container)
+  root.render(<Hello />)
 })
