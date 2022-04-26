@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { getAllTodos } from '../../redux/actions/todoActions';
+import { getAllTodos, setRoutes } from '../../redux/actions/todoActions';
 import Animation from '../Animations/Animation';
 import styles from './Header.module.css';
 
@@ -26,6 +26,18 @@ const Header = () => {
     }
   }
 
+  const setRouting = () => {
+    dispatch(setRoutes("home"))
+  }
+
+  const setPending = () => {
+    dispatch(setRoutes("pending"))
+  }
+
+  const setCompleted = () => {
+    dispatch(setRoutes("completed"))
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.topSection}>
@@ -48,13 +60,13 @@ const Header = () => {
 
       <div className={styles.navigation}>
         <nav className={styles.navLinks}>
-          <div className={styles.firstLink}>
+          <div className={styles.firstLink} onClick={setRouting}>
             All Tasks
           </div>
-          <div className={styles.secondLink}>
+          <div className={styles.secondLink} onClick={setPending}>
             Pending
           </div>
-          <div className={styles.thirdLink}>Completed Tasks</div>
+          <div className={styles.thirdLink} onClick={setCompleted}>Completed Tasks</div>
         </nav>
       </div>
     </div>

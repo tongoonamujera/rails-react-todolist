@@ -20,3 +20,10 @@ export const getAllPendingTodos = (todos) => {
     payload: todos,
   }
 }
+
+export const setRoutes = (route) => {
+  return {
+    type: TodoConstants.SET_ROUTES,
+    payload: route
+  }
+}

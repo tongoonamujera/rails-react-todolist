@@ -40,10 +40,23 @@ const pendingTodosReducer = (state = { pending: [] }, { type, payload }) => {
   }
 }
 
+const routeReducer = (state = { route: "home" }, { type, payload }) => {
+  switch (type) {
+    case TodoConstants.SET_ROUTES:
+      return {
+        route: payload
+      }
+
+    default:
+      return state;
+  }
+}
+
 const todos = combineReducers({
   allTodos: allTodosReducer,
   completed: completedTodosReducer,
   pending: pendingTodosReducer,
+  route: routeReducer,
 })
 
 export default todos;

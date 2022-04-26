@@ -3,7 +3,7 @@
 // of the page.
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import { Provider, useSelector } from 'react-redux';
 import TODOS from './components/allTodos';
 import Header from './components/todos/Header';
 import store from './redux/store';
@@ -16,21 +16,24 @@ import Pending from './components/todos/pending_todos/Pending';
 
 
 const Hello = () => {
+  const route = useSelector(state => state.route.route)
   return (
-    <Provider store={store}>
       <div className={styles.container}>
         <Header />
         <main className={styles.main}>
-          <BrowserRouter>
+
+          {
+            route === "home" ? <TODOS /> : route === "pending" ? <Pending /> : <Completed /> 
+          }
+          {/* <BrowserRouter>
             <Routes>
               <Route exact path="/" element={<TODOS />} />
               <Route path="/completed_todos" element={<Completed />} />
               <Route path="/pending_todos" element={<Pending />} />
             </Routes>
-          </BrowserRouter>
+          </BrowserRouter> */}
         </main>
       </div>
-    </Provider>
   )
 }
 
@@ -38,5 +41,9 @@ const Hello = () => {
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.body.appendChild(document.createElement('div'));
   const root = createRoot(container)
-  root.render(<Hello />)
+  root.render(
+    <Provider store={store}>
+      <Hello />
+    </Provider>
+  )
 })
