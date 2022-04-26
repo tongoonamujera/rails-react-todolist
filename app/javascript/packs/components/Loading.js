@@ -1,4 +1,5 @@
 import React from "react";
+import Animation from "./Animations/Animation";
 import styles from './Loading.module.css';
 const Loading = () => {
   return (
@@ -7,7 +8,7 @@ const Loading = () => {
         <span className={styles.loadingText}>
           Loading
           <span className={styles.loadingDots}>
-            ........
+            <Animation text={'........'}/>
           </span>
         </span>
       </div>
