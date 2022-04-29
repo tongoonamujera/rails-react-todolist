@@ -36,7 +36,6 @@ const TODOS = () => {
 
   const loaded = allTodos.reverse().map((todo, index )=> {
     const {id, body, completed} = todo
-    console.log("index", index)
     return (
       <div key={id} className={styles.container}>
         <TodoItem index={ index } id={id} body={body} completed={completed} />

@@ -23,7 +23,6 @@ const Completed = () => {
   }, [dispatch]);
 
   const completedTodos = useSelector(state => state.completed.completed);
-  console.log('comp: ', completedTodos);
 
   const completed_todo = completedTodos.map((todo, index) => {
     const { id, body, completed } = todo;
