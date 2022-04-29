@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getAllTodos, setRoutes } from '../../redux/actions/todoActions';
 import Animation from '../Animations/Animation';
@@ -8,6 +8,7 @@ import styles from './Header.module.css';
 const Header = () => {
   const bodyInputRef = useRef();
   const dispatch = useDispatch()
+  const [inputValue, setInputValue] = useState('');
 
   const SubmitHandler = (event) => {
     event.preventDefault();
@@ -19,7 +20,7 @@ const Header = () => {
         completed: false
       } ).then(res=> {
         dispatch(getAllTodos(res.data.data))
-        
+        setInputValue('')
       })
     }else{
       alert('You Cant submit Nothing');
@@ -53,6 +54,7 @@ const Header = () => {
             name='body'
             ref={bodyInputRef}
             placeholder='Add A New Task Here .......'
+            value={inputValue}
           />
           <button type='submit'>Add Task</button>
         </form>
