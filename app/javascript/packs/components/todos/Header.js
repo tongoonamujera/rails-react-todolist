@@ -55,6 +55,7 @@ const Header = () => {
             ref={bodyInputRef}
             placeholder='Add A New Task Here .......'
             value={inputValue}
+            onChange={(e) => {setInputValue(e.target.value)}}
           />
           <button type='submit'>Add Task</button>
         </form>
