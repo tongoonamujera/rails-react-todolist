@@ -35,7 +35,7 @@ const TODOS = () => {
   const allTodos = useSelector(state => state.allTodos.todos);
 
   const loaded = allTodos.reverse().map((todo, index )=> {
-    const {id, body, completed} = todo
+    const { id, body, completed } = todo;
     return (
       <div key={id} className={styles.container}>
         <TodoItem index={ index } id={id} body={body} completed={completed} />
