@@ -10,13 +10,13 @@ export const useAnimation = (text, typingSpeed, deletingSpeed) => {
       setTimeout(() => {
         setTyped(word.slice(0, typed.length + 1))
         if (typed.length === word.length)
-          setTyping(false)
+          setTyping(!typing)
       }, typingSpeed)
     } else {
       setTimeout(() => {
         setTyped(typed.slice(0, typed.length - 1))
         if (typed.length === 0)
-          setTyping(true)
+          setTyping(!typing)
       }, deletingSpeed)
     }
   }, [typed, typing])

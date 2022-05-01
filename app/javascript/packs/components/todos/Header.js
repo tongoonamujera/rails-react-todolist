@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getAllTodos, setRoutes } from '../../redux/actions/todoActions';
+import Alert from '../Alerts/Alert';
 import Animation from '../Animations/Animation';
 import styles from './Header.module.css';
 
@@ -14,7 +15,6 @@ const Header = () => {
     event.preventDefault();
     const body = bodyInputRef.current.value;
     if (body){
-      console.log('submited', body);
       axios.post('/create_todo', {
         body: body ,
         completed: false
@@ -23,7 +23,8 @@ const Header = () => {
         setInputValue('')
       })
     }else{
-      alert('You Cant submit Nothing');
+      // alert('You Cant submit Nothing');
+      <Alert message={'You Cant submit Nothing, please Add something'} />
     }
   }
 

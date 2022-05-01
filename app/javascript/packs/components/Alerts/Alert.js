@@ -1,9 +1,13 @@
 import React from 'react';
+import styles from './Alert.module.css'
 
-const Alert = () => {
+const Alert = ({message}) => {
+  console.log(message)
   return (
-    <div>
-      Alert goes here.......
+    <div className={styles.alert}>
+      {
+        message
+      }
     </div>
   )
 }

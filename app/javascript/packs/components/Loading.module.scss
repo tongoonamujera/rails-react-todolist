@@ -8,14 +8,15 @@
 
   .container {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 3vh;
 
     .loadingText {
       font-size: 1.3rem;
       text-shadow: 1px 1px white;
       font-weight: 900;
+      height: fit-content;
+      width: fit-content;
+      margin: auto;
 
       .loadingDots {
         font-size: 3rem;
