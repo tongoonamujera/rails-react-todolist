@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useRef, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getAllTodos, setRoutes } from '../../redux/actions/todoActions';
 import Alert from '../Alerts/Alert';
 import Animation from '../Animations/Animation';
@@ -11,10 +11,22 @@ const Header = () => {
   const dispatch = useDispatch()
   const [inputValue, setInputValue] = useState('');
 
+  const allTodos = useSelector(state => state.allTodos.todos);
+
+  const checkTodoExistence = (todo) => {
+    return (
+      allTodos.map(todos => {
+        const { id, body, completed } = todos;
+        
+        return (todo === body);
+      }).includes(true)
+    )
+  }
+
   const SubmitHandler = (event) => {
     event.preventDefault();
     const body = bodyInputRef.current.value;
-    if (body){
+    if (body && !checkTodoExistence(body)){
       axios.post('/create_todo', {
         body: body ,
         completed: false
@@ -45,7 +57,7 @@ const Header = () => {
       <div className={styles.topSection}>
         <h1>
           &nbsp;
-          <Animation text={"Welcome, Create Your tasks"}/>
+          <Animation text={["Welcome, Guest User", "Please Create Your tasks"]}/>
         </h1>
       </div>
       <div className={styles.todoForm}>
