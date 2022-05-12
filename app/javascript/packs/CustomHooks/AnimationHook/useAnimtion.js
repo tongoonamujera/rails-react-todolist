@@ -7,13 +7,10 @@ export const useAnimation = (text, typingSpeed, deletingSpeed) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const indexControl = (arr) => {
-    if (currentIndex === 0)
-      setCurrentIndex(currentIndex + 1)
-    else if ((currentIndex > 1) && (currentIndex < arr.length - 1))
-      setCurrentIndex(currentIndex + 1)
-    else
-      setCurrentIndex(0)
-
+    (currentIndex === 0 ? setCurrentIndex(currentIndex + 1)
+      : (currentIndex > 0
+        && (currentIndex < arr.length - 1)) ? setCurrentIndex(currentIndex + 1)
+    : setCurrentIndex(0))
     return currentIndex;
   }
 
@@ -29,7 +26,9 @@ export const useAnimation = (text, typingSpeed, deletingSpeed) => {
         setTyped(typed.slice(0, typed.length - 1))
         if (typed.length === 0) {
           setTyping(!typing)
-          indexControl(word)
+          indexControl(word);
+          //   (currentIndex === 0 ? setCurrentIndex(currentIndex + 1)
+          // :(currentIndex >))
         }
       }, deletingSpeed)
     }

@@ -57,7 +57,7 @@ const Header = () => {
       <div className={styles.topSection}>
         <h1>
           &nbsp;
-          <Animation text={["Welcome, Guest User", "Please Create Your tasks"]}/>
+          <Animation text={["Welcome, Guest User", "Please Create Your tasks", "Today Is Your Day"]}/>
         </h1>
       </div>
       <div className={styles.todoForm}>
