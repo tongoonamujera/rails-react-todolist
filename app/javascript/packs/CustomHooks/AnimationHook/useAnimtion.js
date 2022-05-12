@@ -27,8 +27,6 @@ export const useAnimation = (text, typingSpeed, deletingSpeed) => {
         if (typed.length === 0) {
           setTyping(!typing)
           indexControl(word);
-          //   (currentIndex === 0 ? setCurrentIndex(currentIndex + 1)
-          // :(currentIndex >))
         }
       }, deletingSpeed)
     }
