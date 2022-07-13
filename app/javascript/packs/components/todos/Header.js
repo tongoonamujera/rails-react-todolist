@@ -10,6 +10,7 @@ const Header = () => {
   const bodyInputRef = useRef();
   const dispatch = useDispatch()
   const [inputValue, setInputValue] = useState('');
+  const [alert, showAlert] = useState(false);
 
   const allTodos = useSelector(state => state.allTodos.todos);
 
@@ -35,8 +36,7 @@ const Header = () => {
         setInputValue('')
       })
     }else{
-      // alert('You Cant submit Nothing');
-      <Alert message={'You Cant submit Nothing, please Add something'} />
+      showAlert(true);
     }
   }
 
@@ -59,6 +59,11 @@ const Header = () => {
           &nbsp;
           <Animation text={["Welcome, Guest User", "Please Create Your tasks", "Today Is Your Day"]}/>
         </h1>
+          {
+            alert && (<div>
+              <Alert message={'You Cant submit Nothing, please Add something'} />
+            </div>)
+          }
       </div>
       <div className={styles.todoForm}>
         <form onSubmit={SubmitHandler}>
